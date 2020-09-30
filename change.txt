@@ -1,0 +1,19 @@
+<?php 
+ session_start();
+ ?>
+                  <form action="new_page.php" method="get" class="form-box">
+
+
+                    <h3 class="h4 text-black mb-4">Login</h3>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email Addresss" name="email"  value="<?php if(isset($_COOKIE["x"])) { echo $_COOKIE["x"]; } ?>" class="input-field" required     >
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Password"name="psw"  value="<?php if(isset($_COOKIE["y"])) { echo $_COOKIE["y"]; } ?>" class="input-field" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Sign up">  <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+                    </div>
+                  </form>
